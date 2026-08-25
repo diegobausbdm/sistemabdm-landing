@@ -1,0 +1,8 @@
+# Notas internas de trabajo — solo local, NO publicar en Vercel
+CONTEXTO-LANDING.md
+
+# Backups y basura de respaldos
+*.bak
+*.tmp
+*.backup
+*.clean
