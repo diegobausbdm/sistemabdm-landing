@@ -6,3 +6,10 @@ CONTEXTO-LANDING.md
 *.tmp
 *.backup
 *.clean
+
+# Archivos sensibles — NUNCA subir (contraseñas, códigos 2FA, claves)
+recovery-codes.txt
+*recovery-code*
+*.secret
+.env
+.env.*
