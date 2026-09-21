@@ -666,6 +666,10 @@
     var f = document.getElementById('contactForm');
     if (!f) return;
     var msg = document.getElementById('formMsg');
+    window.addEventListener('pageshow', function () {
+      msg.textContent = '';
+      msg.className = 'form-msg';
+    });
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var btn = f.querySelector('button[type=submit]');
