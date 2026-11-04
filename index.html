@@ -106,7 +106,7 @@ src="https://www.facebook.com/tr?id=1474397317832668&ev=PageView&noscript=1"
   /* NAV */
   .nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; gap: 20px; }
-  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand { display: flex; align-items: center; gap: 10px; perspective: 720px; }
   .brand img { height: 34px; width: auto; }
   .brand b { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; letter-spacing: -0.02em; }
   .nav-links { display: flex; align-items: center; gap: 26px; }
@@ -291,13 +291,15 @@ src="https://www.facebook.com/tr?id=1474397317832668&ev=PageView&noscript=1"
   .hp { position:absolute !important; left:-9999px; width:1px; height:1px; overflow:hidden; }
   .form-msg.ok { color: var(--good); }
   .form-msg.err { color: #C13515; }
-  .floatchip.pays { flex-direction: column; align-items: flex-start; gap: 9px; }
+  .floatchip.pays { flex-direction: column; align-items: flex-start; gap: 9px; top: -24px; right: -22px; bottom: auto; left: auto; }
   .floatchip.pays .tx b { font-size:.9rem; }
   .plogos { display:flex; align-items:center; gap:9px; }
   .plogos .plogo { width:auto; background:#fff; border-radius:7px; box-shadow: var(--shadow-sm); display:block; }
   .plogos .plogo.mp { height:36px; padding:4px; }
   .plogos .plogo.tn { height:32px; padding:4px 8px; }
-  .brand .navlogo { height: 40px; width: auto; display:block; filter: drop-shadow(0 4px 6px rgba(16,20,30,.12)); }
+  .brand .navlogo { height: 62px; width: auto; display:block; transform-style: preserve-3d; animation: navspin 7s ease-in-out infinite alternate; filter: drop-shadow(0 8px 11px rgba(16,20,30,.17)); }
+  @keyframes navspin { from { transform: rotateX(12deg) rotateY(-30deg); } to { transform: rotateX(6deg) rotateY(30deg); } }
+  @media (prefers-reduced-motion: reduce){ .brand .navlogo { animation: none; transform: rotateX(8deg) rotateY(-16deg); } }
   .prow.aicap { align-items:center; }
   .prow.aicap .l { align-items:center; gap:11px; }
   .docico { width:36px; height:36px; border-radius:9px; flex:none; background:var(--accent-tint); color:var(--accent-ink); display:grid; place-items:center; }
